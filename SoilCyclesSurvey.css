@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body{
+  background-image: url('wheat.png');
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 100%;
+	background-position: center;
+		/*
+			fixed = parralax
+			scroll = normal
+
+		*/
+	background-attachment: fixed;
+}
+#title{
+  align-self: center;
+  margin-top: 1em;
+}
+#titleText{
+  font-family: 'Patua One', cursive;
+  align-self: center;
+  text-align: center;
+  font-size: 30px;
+}
+#contentBlock{
+  font-family: 'Patua One', cursive;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0 2em 0;
+  width: 80vw;
+  max-height: 90%;
+  background-color: white;
+  align-self: center;
+  border-radius: 15px;
+  padding: 1.5em;
+}
+input[type=text]{
+  width: 60%;
+  background-color: transparent;
+}
+form {
+    display: inline-block;
+    font-size: 20px;
+  }
+  .button{
+    background-color: #FFEFE0;
+    border-radius: 7px;
+    align-self: center;
+    text-align: center;
+    margin-top: 1em;
+  }
+#callToAction{
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+#required{
+  color: red;
+  font-size: 11px;
+}
+.redAst{
+  color: red;
+  display: inline;
+  font-size: 10px;
+}
+
+@media (min-width: 600px) {
+  #contentBlock{
+  width: 65vw;
+  overflow-y: hidden;
+ }
+ #titleText{
+   font-size: 27px;
+ }
+ form{
+   font-size: 25px;
+ }
+ .redAst{
+   font-size: 12px;
+ }
+ #callToAction{
+   font-size: 23px;
+ }
+}
+@media (min-width: 800px) {
+  #contentBlock{
+  width: 50vw;
+ }
+}
+@media (min-width: 1100px) {
+  #contentBlock{
+  width: 40vw;
+ }
+}
