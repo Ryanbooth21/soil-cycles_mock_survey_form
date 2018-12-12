@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ryan Booth</title>
+  <meta name="description">
+  <meta name="Ryan">
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+  </style>
+  <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+  <div id="root">
+  </div>
+</body>
+</html>
+
+<script type="text/babel">
+
+const Code_icon = (
+  <img
+    width="100vw"
+    src="Code_icon.jpg"
+    alt="Code"
+    position="relative"
+      author="href='https://www.freepik.com/free-vector/hand-drawn-business-icons-collection_1091815.htm'>Designed by Dooder"
+    />
+);
+const Design_icon = (
+  <img
+    width="100vw"
+    src="Design_icon.jpg"
+    alt="Design"
+    author="href='https://www.freepik.com/free-vector/hand-drawn-business-icons-collection_1091815.htm'>Designed by Dooder"
+  />
+);
+const Framework_icon = (
+  <img
+    width="100vw"
+    src="Framework_icon.jpg"
+    alt="Design"
+    author="href='https://www.freepik.com/free-vector/hand-drawn-business-icons-collection_1091815.htm'>Designed by Dooder"
+    />
+);
+
+class Banner extends React.Component {
+  render(){
+    return(
+      <div id="banner">
+      <h1 id="bannerText">Hi, i&#8217;m Ryan!</h1>
+      <h2 id="callToAction">Web Developer/Creator</h2>
+
+      </div>
+    )
+  }
+}
+
+class Skills extends React.Component {
+  render(){
+    return(
+    <div id="skillsWrapper">
+      <div id="skills">
+        <h2 id="Mytools">My tools and skills</h2>
+        <div id="mySkills">
+          <div className="skillSet">
+            <h3 className="skillsTitle" >Languages</h3>
+            <div id="code">{Code_icon}</div>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+          </div>
+          <div className="skillSet">
+            <h3 className="skillsTitle">Frameworks</h3>
+            <div id="framework_icon">{Framework_icon}</div>
+              <ul>
+                <li>React</li>
+                <li>Bootstrap</li>
+                <li>Jquery</li>
+              </ul>
+            </div>
+          <div className="skillSet">
+            <h3 className="skillsTitle">Design Tools</h3>
+            <div id="design_icon">{Design_icon}</div>
+              <ul>
+                <li>Wordpress</li>
+                <li>Adobe Illustrator</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    )
+  }
+}
+
+class About extends React.Component {
+  render(){
+    return(
+      <div id="aboutMe">
+        <div className="aboutMeText">
+          <p>Hello! My name is Ryan Booth. I am a web-developer, creator, and outdoor enthusiast from Harrisonburg, Virginia. I am passionate about building things and development is how I express it.</p>
+        </div>
+
+<Skills />
+
+      </div>
+    )
+  }
+}
+
+class Projects extends React.Component {
+  render(){
+    return(
+      <div id="projectWrapper">
+        <h2 id="projectsTitle">My Projects</h2>
+        <div id="projects">
+          <div className="projCol">
+          <a target="_blank" href="https://ryanbooth21.github.io/Funky-Colors/">
+            <div id="proj0" className="proj">
+              <h4>Color Generator</h4>
+            </div>
+          </a>
+          <a target="_blank" href="https://ryanbooth21.github.io/Js-time/">
+            <div id="proj1" className="proj">
+              <h4>Javascript Clock</h4>
+            </div>
+          </a>
+          <a target="_blank" href="https://ryanbooth21.github.io/Random-Quote-Generator/">
+            <div id="proj2" className="proj">
+              <h4>Quote Generator</h4>
+            </div>
+          </a>
+          </div>
+          <div className="projCol">
+            <a href="https://ryanbooth21.github.io/Ryan-Resume/">
+            <div id="proj3" className="proj">
+              <h4>Interactive Resume</h4>
+            </div>
+            </a>
+            <a target="_blank" href=" https://ryanbooth21.github.io/Royal-Robbins-Tribute-Page-FCC/">
+            <div  id="proj4" className="proj">
+              <h4>Tribute Page</h4>
+            </div>
+            </a>
+            <a target="_blank" href="https://ryanbooth21.github.io/What-type-of-climber-are-you-/">
+            <div id="proj5" className="proj">
+              <h4>Bootstrap Quiz</h4>
+            </div>
+            </a>
+            </div>
+          </div>
+        </div>
+    )
+  }
+}
+
+class Footer extends React.Component {
+  render(){
+    return(
+      <div id="footer">
+        <div id="">
+        <h1>Let&#39;s get in touch!</h1>
+          <div id="contact">
+          <p>Email: boothrc&#64;dukes.jmu.edu</p>
+          <p>(540)-638-8238</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+
+class App extends React.Component {
+
+  render(){
+    return(
+     <div id="wrapper">
+    <Banner />
+    <About />
+    <Projects />
+    <Footer />
+    </div>
+    )
+  }
+}
+  ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+  );
+
+</script>
